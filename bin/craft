@@ -1,0 +1,8 @@
+#!/usr/bin/env php
+<?php
+
+require __DIR__.'/../src/vendor/autoload.php';
+$app = new Symfony\Component\Console\Application('WordPress Builder', '1.0.0');
+$app->add(new WordPress\Craft\NewCommand);
+$app->add(new WordPress\Craft\KeyCommand);
+$app->run();
